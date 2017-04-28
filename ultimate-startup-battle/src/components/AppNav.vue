@@ -1,21 +1,21 @@
 <template>
-    <nav class="nav navbar-default">
-        <div class="navbar-header">
-            <router-link to="/" class="navvar-brand"> The Ultimate Startup Battle Ground</router-link>
-        </div>
-    </nav>
-    <ul class="nav navbar-nav navnar-right">
-        <li>
-            <button @click="handleLogout()"type="button" class="btn btn-danger log"name="button">Log Out</button>
-            <button @click="handeLogin()"type="button" class="btn btn-info log"name="button">Log In</button>
-
-        </li>
-
+<div class="app">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <router-link to="/" class="navbar-brand"> The Ultimate Startup Battle Ground</router-link>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <button class="btn btn-danger log" @click="handleLogout()">Log out </button>
+        <button class="btn btn-info log" @click="handleLogin()">Log In</button>
+      </li>
     </ul>
+  </nav>
+</div>
 </template>
 
 <script>
-import { isLoggedIn, login, logout } from '../../utils/auth';
+// import { isLoggedIn, login, logout } from '../../utils/auth';
 
 export default {
   name: 'app-nav',
@@ -31,11 +31,12 @@ export default {
     },
   },
 };
-
 </script>
 
 <style scoped>
-.navbar-right { margin-right: 0px !important}
+.navbar-right {
+  margin-right: 0px !important
+}
 
 .log {
   margin: 5px 10px 0 0;

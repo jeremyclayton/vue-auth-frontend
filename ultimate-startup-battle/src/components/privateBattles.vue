@@ -27,8 +27,9 @@
 
 <script>
 import AppNav from './AppNav';
-import { isLoggedIn } from '../../utils/auth';
-import { getPrivateStartupBattles } from '../../utils/battles-api';
+// import { isLoggedIn } from '../../utils/auth';
+import { getPrivateStartupBattles } from '../utils/battles-api.js';
+
 
 export default {
   name: 'privateBattles',
